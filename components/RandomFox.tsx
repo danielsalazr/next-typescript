@@ -4,7 +4,8 @@
     Aqui se definen cuatro formas de crear un componente de react con typescript
 */
 
-import type {FunctionComponent, FC } from 'react'
+import {useRef} from 'react'
+// import (useRef) from 'react';
 
 
 //Implicito
@@ -20,6 +21,11 @@ type Props = {
 //Explicito, esta es la manera que se debe utilizar
 // export const RandomFox = (props:Props):JSX.Element => {  // Uso de props sin destructing 
 export const RandomFox = ({image}:Props):JSX.Element => { // Uso de props con destructing
+
+    //Asignar null aqui es muy importante tenerlo en cuenta
+    const node = useRef<HTMLImageElement>(null)
+
+    // node.current.src
     // const image: string =  
     return <img 
         src={image} // con destructing
@@ -28,6 +34,7 @@ export const RandomFox = ({image}:Props):JSX.Element => { // Uso de props con de
         height="auto"
         alt="" 
         className='rounded'
+        ref={node}
     />
 }
 
