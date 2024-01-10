@@ -1,0 +1,8 @@
+Pagina de tailwind CSS
+    -https://tailwindcss.com/docs/guides/nextjs
+
+Repositorio del curso
+    -https://github.com/jonalvarezz/platzi-react-typescript
+
+Configuracion de reglas en next para el proyecto, no usar en produccion
+    -https://github.com/jonalvarezz/platzi-react-typescript/commit/e7255af2ccdfcb7aed4bb0bdc87c0a2e34e29006

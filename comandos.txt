@@ -1,0 +1,27 @@
+Crear proyecto de nextjs
+    -npx create-next-app@latest --typescript --use-npm
+    -npx create-next-app@latest --ts --use-npm
+
+    -platzi-react-con-typescript
+
+correr el proyecto
+    -npm run dev
+
+configurar archivo de configuracion de typescript con los siguientes parametros
+    -"noImplicitAny": true,
+    "noImplicitReturns": true,
+
+configurar el eslint.json con los siguientes parametros solo para fines de proyecto
+esto no se debe hacer en produccion
+    -"rules": {
+    "@next/next/no-img-element": "off",
+    "jsx-a11y/alt-text": "off"
+  }
+
+Instalar y ejecutar tailwind CSS
+    -npm install -D tailwind postcss autoprefixer
+    -npx tailwindcss init -p
+
+
+Agregar las configuraciones propuestas en la pagina de tailwind
+    -https://tailwindcss.com/docs/guides/nextjs
