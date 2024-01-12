@@ -29,7 +29,7 @@ export default function Home() {
 
   const addNewFox:MouseEventHandler<HTMLButtonElement> = (event) => {
     event.preventDefault();
-    console.log(event.target)
+    // console.log(event.target)
     const newImage:ImageItems = {
       id: generateID(),
       url: `https://randomfox.ca/images/${random()}.jpg`
