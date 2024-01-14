@@ -2,7 +2,7 @@ import {useState} from 'react'
 import type {MouseEventHandler,} from 'react'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import { RandomFox } from '@/components/RandomFox'
+import { LazyImage } from '@/components/RandomFox'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -37,16 +37,30 @@ export default function Home() {
     setImages([...images, newImage])
   }
 
+  
+
   return (
     <main
       
     >
       <h1 className="text-3xl font-bold underline">Hey Platzi 😎!</h1>
       <button onClick={addNewFox}>Add Fox</button>
-      {images.map( ({id, url}) => (
+      {images.map( ({id, url}, index) => (
         <div key={id} className="p-4">
           {/* <h6>{id}</h6> */}
-          <RandomFox image={url} />
+          <LazyImage 
+            // image={url}
+            src={url}
+            onClick={ () => console.log("Hey baby")}
+            title="RandomFox" 
+            width={320}
+            height="auto"
+            alt="" 
+            className='rounded bg-gray-300'
+            onLazyLoad={(img) => {
+              console.log(`Image #${index+1} cargaba el nodo`, img)
+            }}
+          />
         </div>
       )
 
